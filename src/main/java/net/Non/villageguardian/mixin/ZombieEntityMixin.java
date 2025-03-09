@@ -21,7 +21,6 @@ public abstract class ZombieEntityMixin extends HostileEntity {
         super(entityType, world);
     }
 
-
     @ModifyConstant(method = "createZombieAttributes", constant = @Constant(doubleValue = 35.0, ordinal = 0))
     private static double modifyZombieFollowRange(double original) throws IOException {
         return Double.parseDouble(Objects.requireNonNull(getValueFromConfig(ZOMBIE_FOLLOW_RANGE_KEY)));

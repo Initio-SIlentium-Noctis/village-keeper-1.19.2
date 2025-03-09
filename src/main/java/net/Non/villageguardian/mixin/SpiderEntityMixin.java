@@ -5,10 +5,12 @@ import net.minecraft.entity.attribute.DefaultAttributeContainer;
 import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.mob.HostileEntity;
 import net.minecraft.entity.mob.SpiderEntity;
+import net.minecraft.entity.passive.MerchantEntity;
 import net.minecraft.world.World;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
+import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 import java.io.IOException;
@@ -22,6 +24,11 @@ public abstract class SpiderEntityMixin extends HostileEntity {
 
     protected SpiderEntityMixin(EntityType<? extends HostileEntity> entityType, World world) {
         super(entityType, world);
+    }
+
+    @Inject(method = "initGoals", at = @At("TAIL"))
+    public void initGoals(CallbackInfo ci) {
+        this.targetSelector.add(1, new SpiderEntity.TargetGoal<MerchantEntity>((SpiderEntity)(Object)this, MerchantEntity.class));
     }
 
     @Inject(method = "createSpiderAttributes", at = @At("RETURN"), cancellable = true)
