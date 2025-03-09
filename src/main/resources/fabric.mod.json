@@ -14,7 +14,7 @@
   },
 
   "license": "CC0-1.0",
-  "icon": "assets/villagekeeper/icon.png",
+  "icon": "assets/villageguardian/icon.png",
 
   "environment": "*",
   "entrypoints": {

@@ -4,6 +4,10 @@
   "package": "net.Non.villageguardian.mixin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
+    "CreeperEntityMixin",
+    "ZombieEntityMixin",
+    "AbstractSkeletonEntityMixin",
+    "SpiderEntityMixin"
   ],
   "client": [
   ],
