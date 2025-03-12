@@ -1,15 +1,15 @@
-package net.Non.villageguardian.util.config;
+package net.Non.villagekeeper.util.config;
 
 import net.fabricmc.loader.api.FabricLoader;
 
 import java.io.*;
 import java.nio.file.Files;
 
-import static net.Non.villageguardian.VillageGuardian.MOD_ID;
+import static net.Non.villagekeeper.VillageKeeper.MOD_ID;
 
 public class ConfigFileUtils {
 
-    private static final String CONFIG_FILE_PATH = "/assets/villageguardian/default.cfg"; // Path in resources
+    private static final String CONFIG_FILE_PATH = "/assets/villagekeeper/default.cfg";
     private static final String CONFIG_FILE_NAME = "settings.cfg";
 
 

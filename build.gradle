@@ -52,7 +52,7 @@ dependencies {
 }
 
 loom {
-	accessWidenerPath = file("src/main/resources/villageguardian.accesswidener")
+	accessWidenerPath = file("src/main/resources/villagekeeper.accesswidener")
 
 
 	runs {

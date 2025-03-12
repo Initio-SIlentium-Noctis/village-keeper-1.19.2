@@ -14,21 +14,21 @@
   },
 
   "license": "CC0-1.0",
-  "icon": "assets/villageguardian/icon.png",
+  "icon": "assets/villagekeeper/icon.png",
 
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.Non.villageguardian.VillageGuardian"
+      "net.Non.villagekeeper.VillageKeeper"
     ],
     "client": [
-      "net.Non.villageguardian.VillageGuardian"
+      "net.Non.villagekeeper.VillageKeeper"
     ]
   },
   "mixins": [
-    "villageguardian.mixins.json"
+    "villagekeeper.mixins.json"
   ],
-  "accessWidener" : "villageguardian.accesswidener",
+  "accessWidener" : "villagekeeper.accesswidener",
   "depends": {
     "fabricloader": ">=0.14.19",
     "fabric-api": "*",

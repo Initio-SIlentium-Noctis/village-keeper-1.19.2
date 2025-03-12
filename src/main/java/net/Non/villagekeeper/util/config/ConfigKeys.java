@@ -1,4 +1,4 @@
-package net.Non.villageguardian.util.config;
+package net.Non.villagekeeper.util.config;
 
 public interface ConfigKeys {
 

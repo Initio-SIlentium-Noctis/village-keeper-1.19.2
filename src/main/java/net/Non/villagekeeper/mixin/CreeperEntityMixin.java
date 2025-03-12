@@ -1,4 +1,4 @@
-package net.Non.villageguardian.mixin;
+package net.Non.villagekeeper.mixin;
 
 
 import net.minecraft.entity.EntityType;
@@ -20,8 +20,8 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 import java.io.IOException;
 import java.util.Objects;
 
-import static net.Non.villageguardian.util.config.ConfigFileUtils.getValueFromConfig;
-import static net.Non.villageguardian.util.config.ConfigKeys.CREEPER_FOLLOW_RANGE_KEY;
+import static net.Non.villagekeeper.util.config.ConfigFileUtils.getValueFromConfig;
+import static net.Non.villagekeeper.util.config.ConfigKeys.CREEPER_FOLLOW_RANGE_KEY;
 
 @Mixin(CreeperEntity.class)
 public abstract class CreeperEntityMixin extends HostileEntity {
@@ -32,8 +32,8 @@ public abstract class CreeperEntityMixin extends HostileEntity {
 
     @Inject(method = "initGoals", at = @At("TAIL"))
     public void initGoals(CallbackInfo ci) {
-        this.targetSelector.add(3, new ActiveTargetGoal<MerchantEntity>((MobEntity)this, MerchantEntity.class, false));
-        this.targetSelector.add(3, new ActiveTargetGoal<IronGolemEntity>((MobEntity)this, IronGolemEntity.class, true));
+         this.targetSelector.add(3, new ActiveTargetGoal<MerchantEntity>((MobEntity)this, MerchantEntity.class, false, false));
+         this.targetSelector.add(3, new ActiveTargetGoal<IronGolemEntity>((MobEntity)this, IronGolemEntity.class, true));
     }
 
     @Inject(method = "createCreeperAttributes", at = @At("RETURN"), cancellable = true)

@@ -1,4 +1,4 @@
-package net.Non.villageguardian.mixin;
+package net.Non.villagekeeper.mixin;
 
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.mob.HostileEntity;
@@ -11,8 +11,8 @@ import org.spongepowered.asm.mixin.injection.ModifyConstant;
 import java.io.IOException;
 import java.util.Objects;
 
-import static net.Non.villageguardian.util.config.ConfigFileUtils.getValueFromConfig;
-import static net.Non.villageguardian.util.config.ConfigKeys.ZOMBIE_FOLLOW_RANGE_KEY;
+import static net.Non.villagekeeper.util.config.ConfigFileUtils.getValueFromConfig;
+import static net.Non.villagekeeper.util.config.ConfigKeys.ZOMBIE_FOLLOW_RANGE_KEY;
 
 @Mixin(ZombieEntity.class)
 public abstract class ZombieEntityMixin extends HostileEntity {

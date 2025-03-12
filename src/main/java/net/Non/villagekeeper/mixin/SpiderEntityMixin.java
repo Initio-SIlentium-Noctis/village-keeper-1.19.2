@@ -1,4 +1,4 @@
-package net.Non.villageguardian.mixin;
+package net.Non.villagekeeper.mixin;
 
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.attribute.DefaultAttributeContainer;
@@ -16,8 +16,8 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 import java.io.IOException;
 import java.util.Objects;
 
-import static net.Non.villageguardian.util.config.ConfigFileUtils.getValueFromConfig;
-import static net.Non.villageguardian.util.config.ConfigKeys.SPIDER_FOLLOW_RANGE_KEY;
+import static net.Non.villagekeeper.util.config.ConfigFileUtils.getValueFromConfig;
+import static net.Non.villagekeeper.util.config.ConfigKeys.SPIDER_FOLLOW_RANGE_KEY;
 
 @Mixin(SpiderEntity.class)
 public abstract class SpiderEntityMixin extends HostileEntity {

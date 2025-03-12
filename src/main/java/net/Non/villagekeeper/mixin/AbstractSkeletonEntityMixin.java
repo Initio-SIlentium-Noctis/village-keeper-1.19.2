@@ -1,4 +1,4 @@
-package net.Non.villageguardian.mixin;
+package net.Non.villagekeeper.mixin;
 
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.ai.goal.ActiveTargetGoal;
@@ -18,8 +18,8 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 import java.io.IOException;
 import java.util.Objects;
 
-import static net.Non.villageguardian.util.config.ConfigFileUtils.getValueFromConfig;
-import static net.Non.villageguardian.util.config.ConfigKeys.SKELETON_FOLLOW_RANGE_KEY;
+import static net.Non.villagekeeper.util.config.ConfigFileUtils.getValueFromConfig;
+import static net.Non.villagekeeper.util.config.ConfigKeys.SKELETON_FOLLOW_RANGE_KEY;
 
 @Mixin(AbstractSkeletonEntity.class)
 public abstract class AbstractSkeletonEntityMixin extends HostileEntity {
@@ -30,7 +30,7 @@ public abstract class AbstractSkeletonEntityMixin extends HostileEntity {
 
     @Inject(method = "initGoals", at = @At("TAIL"))
     public void initGoals(CallbackInfo ci) {
-        this.targetSelector.add(1, new ActiveTargetGoal<MerchantEntity>((MobEntity)this, MerchantEntity.class, false));
+        this.targetSelector.add(1, new ActiveTargetGoal<MerchantEntity>((MobEntity)this, MerchantEntity.class, false, false));
     }
 
     @Inject(method = "createAbstractSkeletonAttributes", at = @At("RETURN"), cancellable = true)
