@@ -28,7 +28,7 @@ public abstract class SpiderEntityMixin extends HostileEntity {
 
     @Inject(method = "initGoals", at = @At("TAIL"))
     public void initGoals(CallbackInfo ci) {
-        this.targetSelector.add(1, new SpiderEntity.TargetGoal<MerchantEntity>((SpiderEntity)(Object)this, MerchantEntity.class));
+        this.targetSelector.add(3, new SpiderEntity.TargetGoal<MerchantEntity>((SpiderEntity)(Object)this, MerchantEntity.class));
     }
 
     @Inject(method = "createSpiderAttributes", at = @At("RETURN"), cancellable = true)
