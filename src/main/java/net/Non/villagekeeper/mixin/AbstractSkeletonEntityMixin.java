@@ -30,7 +30,7 @@ public abstract class AbstractSkeletonEntityMixin extends HostileEntity {
 
     @Inject(method = "initGoals", at = @At("TAIL"))
     public void initGoals(CallbackInfo ci) {
-        this.targetSelector.add(1, new ActiveTargetGoal<MerchantEntity>((MobEntity)this, MerchantEntity.class, false, false));
+        this.targetSelector.add(3, new ActiveTargetGoal<MerchantEntity>((MobEntity)this, MerchantEntity.class, false, false));
     }
 
     @Inject(method = "createAbstractSkeletonAttributes", at = @At("RETURN"), cancellable = true)

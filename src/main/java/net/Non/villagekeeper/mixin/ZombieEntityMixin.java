@@ -26,8 +26,14 @@ public abstract class ZombieEntityMixin extends HostileEntity {
         return Double.parseDouble(Objects.requireNonNull(getValueFromConfig(ZOMBIE_FOLLOW_RANGE_KEY)));
     }
 
-
-
-
+    @ModifyConstant(method = "initCustomGoals", constant = @Constant(intValue = 2, ordinal = 1))
+    private int modifyPlayerEntityTargetPriority(int original) {
+        return 3;
+    }
+    
+    @ModifyConstant(method = "initCustomGoals", constant = @Constant(intValue = 3, ordinal = 0))
+    private int modifyMerchantEntityTargetPriority(int original) {
+        return 2;
+    }
 
 }
