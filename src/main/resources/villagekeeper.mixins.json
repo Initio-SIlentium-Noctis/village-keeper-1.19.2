@@ -8,7 +8,8 @@
     "CreeperEntityMixin",
     "ZombieEntityMixin",
     "AbstractSkeletonEntityMixin",
-    "SpiderEntityMixin"
+    "SpiderEntityMixin",
+    "ScoreboardMixin"
   ],
   "client": [
   ],
